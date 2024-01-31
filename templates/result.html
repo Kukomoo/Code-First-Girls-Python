@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunger Games</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+    <main>
+        <div>🤩🤩🤩</div>
+        <h1>Hopefully this feeds your hunger!!!</h1>
+        <h2>🙌 Showing results for Ingredient: {{ ingredient }}{% if dietary %} & Dietary: {{ dietary }}{% endif %} 🙌</h2>
+        <ul>
+            {% for result in results %} {# starts the loop to parase through the results#}
+                <li>
+                    <h3>📖 Recipe Name:</h3> {{ result.recipe.label }}<br>
+                    <h3>🔗 Webpage:</h3> <a href="{{ result.recipe.url }}" target="_blank">{{ result.recipe.url }}</a><br>
+                    <img src="{{ result.recipe.image }}" alt="Recipe Picture"><br>
+                </li>
+            {% endfor %}
+        </ul>
+    </main>
+</body>
+</html>

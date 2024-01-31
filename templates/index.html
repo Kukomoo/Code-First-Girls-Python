@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunger Games</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+  <main>
+    <div>🏃‍♀️🏃‍♀️🏃‍♀️</div>
+    <h1>Let the Hunger Games Begin 🍴</h1>
+    <form action="/" method="post">
+        <label for="ingredient">Your Favorite Ingredient: 😋</label>
+        <input type="text" name="ingredient" required placeholder="E.g, apple, avocado, shrimp">
+        
+        <label for="dietary">Dietary Requirement: 🤔</label>
+        <select name="dietary">
+            <option value="">None</option>
+            <option value="vegan">Vegan</option>
+            <option value="vegetarian">Vegetarian</option>
+            <option value="gluten-free">Gluten-Free</option>
+            <option value="wheat-free">Wheat-Free</option>
+            <option value="lactose-free">Lactose-Free</option>
+        </select>
+        
+        <button type="submit">Generate Recipe</button>
+    </form>
+  </main>
+</body>
+</html>

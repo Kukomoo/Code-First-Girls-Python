@@ -37,5 +37,8 @@ def recipe_search(ingredient, dietary):
         print(f"Error: Unable to fetch recipes. Status Code: {result.status_code}")
         return []
 
+import os
+
 if __name__ == '__main__':
-  app.run(host="0.0.0.0", port=80) #calling the app to run 
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)

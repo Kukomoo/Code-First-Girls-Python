@@ -20,8 +20,8 @@ def index():
 
 def recipe_search(ingredient, dietary):
     
-    app_id = os.environ.get('APP_ID')
-    app_key = os.environ.get('APP_KEY')
+    app_id = "8ff0a5d9"
+    app_key = "0b2108368f934dab51af55fa03b1471d"
 
     
     result = requests.get('https://api.edamam.com/search?q={}%2C{}&app_id={}&app_key={}'.format(ingredient, dietary, app_id, app_key))
